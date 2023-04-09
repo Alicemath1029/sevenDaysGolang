@@ -2,6 +2,7 @@ package geebolt
 
 import (
 	"errors"
+	"fmt"
 	"hash/fnv"
 	"unsafe"
 )
@@ -29,5 +30,6 @@ func (m *meta) validate() error {
 	if m.checksum != m.sum64() {
 		return errors.New("invalid checksum")
 	}
+	fmt.Println("hello world")
 	return nil
 }
